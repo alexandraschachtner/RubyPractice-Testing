@@ -3,7 +3,7 @@ require "./address"
 
 class Contact
   attr_writer :first_name, :middle_name, :last_name
-  attr_reader :phone_numbers, :address
+  attr_reader :phone_numbers, :addresses
 
   def initialize
     @phone_numbers = []
