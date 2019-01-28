@@ -28,6 +28,16 @@ class Contact
     addresses.push(address)
   end
 
+  def print_phone_numbers
+    puts "Phone Numbers"
+    phone_numbers.each { |phone_number| puts phone_number}
+  end
+
+  def print_addresses
+    puts "Addresses"
+    addresses.each { |address| puts address.to_s('short') }
+  end
+
   def first_name
     @first_name
   end
@@ -73,24 +83,13 @@ class Contact
        full_name
      when 'last_first'
        last_first
-     when 'last_name'
+     when 'last'
        last_name
-     when 'first_name'
+     when 'first'
        first_name
      else
       first_last
    end
-
-  def print_phone_numbers
-    puts "Phone Numbers"
-    phone_numbers.each{|phone_number| puts phone_number}
-  end
-
-  def print_addresses
-    puts "Addresses"
-    addresses.each { |address| puts address.to_s('short') }
-  end
-
   end
 end
 
@@ -101,5 +100,6 @@ jason.add_phone_number("home", "123-456-7890")
 jason.add_phone_number("work", "555-555-5555")
 jason.add_address("Home", "123 Main St.", "", "Portland", "OR", "12345")
 puts jason.to_s('full_name')
+puts jason.last_first
 jason.print_phone_numbers
 jason.print_addresses
