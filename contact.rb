@@ -92,14 +92,3 @@ class Contact
    end
   end
 end
-
-jason = Contact.new
-jason.first_name = "Jason"
-jason.last_name = "Seifer"
-jason.add_phone_number("home", "123-456-7890")
-jason.add_phone_number("work", "555-555-5555")
-jason.add_address("Home", "123 Main St.", "", "Portland", "OR", "12345")
-puts jason.to_s('full_name')
-puts jason.last_first
-jason.print_phone_numbers
-jason.print_addresses
